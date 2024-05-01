@@ -5,11 +5,11 @@ pipeline {
         stage("Start") {
             steps {
                 // Checkout the main branch of the GitHub repository
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-creds', url: 'https://github.com/Akshaymitra/demo']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-creds', url: 'https://github.com/Akshaymitra/demo']])
 
                 // Run python3 test.py
-                script {
-                    sh """ssh -t -t ubuntu@10.160.0.90 << EOF
+               script {
+                    sh """ssh -i /home/akshay/.ssh/id_demo2 -o StrictHostKeyChecking=no -t -t ubuntu@10.160.0.90 << EOF
                             sudo mkdir /home/ubuntu/niceone
                             exit
                             EOF"""
