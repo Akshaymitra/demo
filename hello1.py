@@ -6,4 +6,4 @@ print(z+7)
 
 print(z+2567)
 
-print("new commit-msdsddsd")
+print("new commit-msddd")
