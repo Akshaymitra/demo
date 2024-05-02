@@ -1,5 +1,5 @@
 import time
 
 while True:
-    print("Hello, every 76 seconds!")
+    print("Hello, every 75 seconds!")
     time.sleep(5)
