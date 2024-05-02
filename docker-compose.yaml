@@ -2,4 +2,6 @@ version: '3'
 services:
   python-app:
     build: .
+    volumes:
+      - .:/app
     restart: always
